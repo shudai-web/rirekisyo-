@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShudaiPortfolio</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/reset.css">
+    <link rel="stylesheet" href="assets/Portfolio.css">
+    <link rel="stylesheet" href="assets/load.css">
+  </head>
+  <body>
+    <div id="splash">
+      <div id="splash_logo"><img src="assets/images/page-logo.png" alt="" class="fadeUp"></div><!--画像部分は適宜差し換えてください-->
+      <!--/splash--></div>
+    
+    <div class="splashbg"></div><!---画面遷移用-->
+    <div id="wrapper">
+      <div class="work-title text-center">
+        <h1>
+          <span class="bgextend bgLRextendTrigger">
+            <span class="bgappearTrigger">WORKS</span>
+          </span>
+        </h1>
+      </div>
+  
+      <div class="container">
+        <div class="row work-list">
+  
+          <div class="work-item col-md-4">
+            <a href="works/Write/write.html">
+              <div>
+                <img src="assets/images/item2.png"  alt="">
+              </div>
+              <p class="text-center">Write <br><br>HTML&CSS, Jquery</p>
+            </a>
+          </div>
+  
+          <div class="work-item col-md-4">
+            <a href="works/JIN/jin.html">
+              <img src="assets/images/item3.png"  alt="">
+              <p class="text-center">Jin <br><br>HTML&CSS, Bootstrap, Jquery</p>
+            </a>
+          </div>
+  
+          <div class="work-item col-md-4">
+            <a href="https://chibidai-web.com">
+              <img src="assets/images/screenshot.png"  alt="">
+              <p class="text-center">BISTRO CALME <br><br>Wordpress</p>
+            </a>
+          </div>
+  
+          <div class="work-item col-md-4">
+            <a href="works/slider/index.html">
+              <img src="assets/images/slider.png"  alt="">
+              <p class="text-center">KANAGAWA <br><br>HTML&CSS Jquery</p>
+            </a>
+          </div>
+  
+          </div>
+  
+        </div>
+      </div>
+
+      <footer></footer>
+    </div>
+      
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="assets/load.js"></script>
+  </body>
+</html>
