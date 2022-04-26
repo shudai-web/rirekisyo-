@@ -1,0 +1,712 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+ margin:0;
+ padding:0;
+ border:0;
+ outline:0;
+ vertical-align:baseline;
+ background:transparent;
+}
+
+body {
+ /* プロジェクトによって変動 */
+ color: #000;
+ line-height: 1.6;
+ font-weight: 400;
+ font-family: 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'YuGothic', '游ゴシック', 'メイリオ', Meiryo, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+
+ width: 100%;
+ font-variant-numeric: tabular-nums;
+ /* safari hover対策 */
+ -webkit-font-smoothing: antialiased;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+ display:block;
+}
+
+ul, ol {
+ list-style:none;
+}
+
+blockquote, q {
+ quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+ content:'';
+ content:none;
+}
+
+a {
+ margin:0;
+ padding:0;
+ vertical-align:baseline;
+ text-decoration: none;
+ color: inherit;
+}
+
+/* change colours to suit your needs */
+ins {
+ background-color:#ff9;
+ color:#000;
+ text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+ background-color:#ff9;
+ color:#000;
+ font-style:italic;
+ font-weight:bold;
+}
+
+del {
+ text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+ border-bottom:1px dotted;
+ cursor:help;
+}
+
+table {
+ border-collapse:collapse;
+ border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+ display:block;
+ height:1px;
+ border:0;
+ border-top:1px solid #cccccc;
+ margin:1em 0;
+ padding:0;
+}
+
+input, select {
+ vertical-align:middle;
+}
+
+img {
+ vertical-align: bottom;
+ line-height: 1.0;
+}
+
+button {
+ line-height: 1.0;
+ background-color: transparent;
+ border: none;
+ cursor: pointer;
+ outline: none;
+ padding: 0;
+ appearance: none;
+}
+
+/*ここから自分*/
+
+@mixin hover($color){
+    &:hover{
+        color: $color;
+        transition: 0.7s;
+    }
+}
+
+
+.body{  
+    font-size: 15px;
+    font-family: Georgia, '游明朝', YuMincho, 'Hiragino Mincho ProN', Meiryo, serif;
+    line-height: 1.8;
+}
+
+h1, h2, h3, h4, h5, h6, .site-title {
+    font-family: Georgia, '游明朝', YuMincho, 'Hiragino Mincho ProN', Meiryo, serif;
+}
+
+.container{
+    max-width: 1000px;
+    width: 100%;
+    padding-left: 75px;
+    padding-right: 75px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/*ヘッダー*/
+header{
+    .container{
+        display: flex;
+        justify-content: space-between;
+        height: 70px;
+        .header-right{
+            margin-top: 30px;
+
+            ul{
+                display: inline-block;
+            }
+
+            li{
+                display: inline-block;
+                margin-right: 30px;
+                padding: 20px 0;
+                position: relative;
+                a{
+                    @include hover(rgb(71, 160, 71));
+                }
+
+
+                ul{
+                    position: absolute;
+                    top: 50px;
+                    left: -0.5px;
+                    height: 0;
+                    visibility: hidden;
+                    
+                    li{
+                        width: 200px;
+                        display: block;
+                        border: solid 1px #f0f0f0;
+                        box-shadow: 0.5px 0.5px #f0f0f0;
+                        padding: 10px 20px;
+                        display: block;
+                        background-color: white;
+                        
+                    }
+                    
+                }
+                &:hover ul li{
+                    visibility: visible;
+                }
+                .nav{
+                    margin-left: 13px;
+                }
+            }
+
+            .serch-box{
+                display: inline-block;
+                padding-left: 5px;
+
+                .serch{
+                    cursor: pointer;
+                }
+                
+
+                #input{
+                    height: 40px;
+                    border: none;
+                    outline: none;
+                    width: 0;
+                    cursor: text;
+                }
+            }
+        }
+    }
+}
+#nav-container{
+    display: none;
+}
+.toggle-icon {
+    display: block;
+    width: 100%;
+    -webkit-transition: margin 300ms;
+    -moz-transition: margin 300ms;
+    transition: margin 300ms;
+    cursor: pointer;
+  }
+
+  #nav-container{
+      margin-top: 3%;
+      z-index: 101;
+  }
+  
+  .toggle-icon .bar {
+    display: block;
+    width: 1.4em;
+    height: 0.14em;
+    margin: 0.5em;
+    background-color: black;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition-duration: 300ms;
+    -moz-transition-duration: 300ms;
+    transition-duration: 300ms;
+  }
+    .toggle-icon .bar:nth-of-type(2) {
+      -webkit-transition: opacity 300ms;
+      -moz-transition: opacity 300ms;
+      transition: opacity 300ms;
+    }
+  
+  /*pushed*/
+    .pushed .toggle-icon{
+        margin-right: -0.7em;
+    }
+    .pushed .bar:nth-of-type(2) {
+      opacity: 0;
+    }
+  
+    .pushed {
+        .bar:nth-of-type(1) {
+            -webkit-transform: rotate(42deg) translateY(0.87em);
+              -moz-transform: rotate(42deg) translateY(0.87em);
+              -ms-transform: rotate(42deg) translateY(0.87em);
+              -o-transform: rotate(42deg) translateY(0.87em);
+              transform: rotate(42deg) translateY(0.87em);
+        }
+        .bar:nth-of-type(3) {
+            -webkit-transform: rotate(-42deg) translateY(-0.87em);
+            -moz-transform: rotate(-42deg) translateY(-0.87em);
+            -ms-transform: rotate(-42deg) translateY(-0.87em);
+            -o-transform: rotate(-42deg) translateY(-0.87em);
+            transform: rotate(-42deg) translateY(-0.87em);
+        }
+    }
+        
+.nav-modal-wrapper{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+    background-color: #fff;
+    opacity: 0.9;
+    display: none;
+    .modal{
+        opacity: 1;
+        text-align: center;
+        margin-top: 20%;
+        .modal-list{
+            margin-top: 3%;
+            li{
+                font-size: 1.4rem;
+                margin-top: 3.8%;
+                a{
+                    @include hover(rgb(71, 160, 71));
+                }
+                ul{
+                    li{
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+@mixin color{
+    color: #777;
+}
+
+/*見出し*/
+.top-wrapper{
+    margin-top: 90px;
+    .visual{
+        text-align: center;
+        img{
+            width: 100%;
+        }
+    }
+    .main-text{
+        margin-top: 100px;
+        h2{
+            font-size: 27px;
+            line-height: 1.8;
+            @include color;
+        }
+    }
+}
+
+/*ブログ*/
+.blog-content{
+    margin-top: 130px;
+    .blog-item{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 90px;
+        h4{
+            @include color;
+
+            a{
+                @include hover(#666);
+            }
+        }
+        .ttl{
+            width: 70%;
+            h3{
+                font-size: 1.5rem;
+                color: inherit;
+                a{
+                    @include hover(rgb(71, 160, 71));
+                }
+            }
+            p{
+                width: 100%;
+                margin-top:35px;
+                @include color;
+            }
+        }
+    }
+}
+
+.page-btn{
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 105px;
+    .number{
+        border: solid 1px #ddd;
+        display: inline-block;
+        padding: 12px 20px;
+        margin-right: 12px;
+        cursor: pointer;
+        a{
+            @include color;
+            @include hover(black);
+            .fas{
+                font-size: 12px;
+                &.right{
+                    margin-left: 10px;
+                }
+                &.left{
+                    margin-right: 10px;
+                }
+            }
+        }
+        
+    }
+}
+
+.account{
+    box-sizing: border-box;
+    margin: 0 auto;
+    height: 400px;
+    display: table;
+    padding-top: 77px;
+    padding-bottom: 125px;
+    border-top: solid 0.1px #ddd;
+    border-bottom: solid 0.1px #ddd;
+    .account-content{
+        display: table-cell;
+        width: 32.36%;
+        padding-right: 75px;
+        .account-prof{
+            display: inline-block;
+            img{
+                border-radius: 50%;
+                height: 100px;
+                width: 100px;
+            }
+        }
+        
+        .account-ttl{
+            display: inline-block;
+            margin-left: 20px;
+            vertical-align: top;
+            margin-top: 20px;
+            h4{
+                font-size: 20px;
+            }
+            li{
+                display: inline-block;
+                margin-right: 20px;
+                @include color;
+                font-size: 20px;
+                @include hover(#666);
+            }
+        }
+        p{
+            @include color;
+            margin-top: 25px;
+        }
+    }
+    
+    .account-right{
+        display: table-cell;
+        width: 67.64%;
+        text-align: left;
+        vertical-align: top;
+        .account-box{
+            display: table;
+            width: 100%;
+            .account-item{
+                display: table-cell;
+                padding-right: 21px;
+                padding-left: 19px;
+                width: 33.3%;
+                .account-top{
+                    h4{
+                        margin-bottom: 25px;
+                    }
+                    p, .list-item{
+                        @include color;
+                    }
+                    a{
+                        border-bottom: solid 1px #ddd;
+                        @include color;
+                        display: inline-block;
+                        margin-bottom: 14px;
+                        @include hover(rgb(71, 160, 71));
+                    }
+                    h5{
+                        color: #999;
+                        margin-bottom: 25px;
+                    }
+                    .list-item{
+                        margin-bottom: 14px;
+                    }
+                }
+                .serch-box2{
+                    width: 100%;
+                    outline: none;
+                    margin-top: 95px;
+                    padding: 10px 13px;
+                    font-size: 16px;
+                    border: 1px solid #e6e6e6;
+                }
+                &:first-child{
+                    padding-left: 0;
+                }
+                &:last-child{
+                    padding-right: 0;
+                }
+            }
+        }
+        
+    }
+}
+
+footer{
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 80px;
+    .container{
+        .footer-table{
+            display: flex;
+            margin-top: 65px;
+            .footer-left{
+                ul{
+                    li{
+                        display: inline-block;
+                        margin-right: 25px;
+                        font-size: 25px;
+                        color: #999;
+                        &:hover{
+                            color: #666;
+                            transition: 1s;
+                        }
+                        &:last-child{
+                            margin-right: 180px;
+                        }
+                    }
+                }
+                
+            }
+            .footer-center{
+                h3{
+                    color: #ddd;
+                    font-size: 0.9rem;
+                    a{
+                        color: #666;
+                        @include hover(black);
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+/*ここからメディアクエリ*/
+$max-pc: 1024px;
+$pc: 1024px; // PC
+$tab: 780px; // タブレット
+$sp: 480px;  // スマホ
+
+@mixin pc {
+    @media (min-width: ($pc)) {
+      @content;
+    }
+  }
+  @mixin max-pc {
+      @media (max-width: ($max-pc)) {
+          @content;
+      }
+  }
+  @mixin tab {
+    @media (max-width: ($tab)) {
+      @content;
+    }
+  }
+  @mixin sp {
+    @media (max-width: ($sp)) {
+      @content;
+    }
+  }
+
+  @include tab {
+    body{
+        .container{
+            padding: 0 15px;
+        }
+    }
+
+    .header-right{
+        display: none;
+    }
+
+    #nav-container{
+        display: block;
+    }
+
+    .container{
+        max-width: 680px;
+        padding: 0;
+    } 
+    .top-wrapper{
+        .main-text{
+            h2{
+                font-size: 1.38rem;
+            }
+        }
+    }
+    .blog-content{
+        .blog-item{
+            flex-direction: column;
+            margin-top: 60px;
+            h4{
+                font-size: 0.85rem;
+                font-weight: lighter;
+            }
+            .ttl{
+                width: 100%;
+                h3{
+                    font-size: 1.3rem;
+                    padding-top: 10px;
+                }
+                p{
+                    width: 100%;
+                    margin-top: 20px;
+                    font-size: 0.9rem;
+                    line-height: 28px;
+                }
+            }
+        }
+    }
+    .page-btn{
+        .container{
+            .page-content{
+                width: 35%;
+                display: flex;
+                .number{
+                    display: none;
+                    padding: 5px 15px;
+                    &:last-child{
+                        display: block;
+                    }
+                    a{
+                        font-size: 0.7rem;
+                    }
+                }
+            }
+        }
+
+    }
+    .account{
+        .account-content{
+            display: block;
+            padding: 0;
+            width: 100%;
+            .account-ttl{
+                h4,a{
+                    font-size: 1.1rem;
+                    i{
+                        font-size: 1.2rem;
+                        margin-right: -10px;
+                    }
+                }
+            }
+            p{
+                font-size: 0.8rem;
+            }
+        }
+        .account-right{
+            display: block;
+            width: 100%;
+            .account-box{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                .account-item{
+                    width: 100%;
+                    margin-top: 70px;
+                    padding: 0;
+                    .account-top{
+                        h4,p,ul{
+                            font-size: 0.8rem;
+                        }
+                        form{
+                            input{
+                                width: 40%;
+                                padding: 5px 13px;
+                            }
+                        }
+                    }
+                    &:first-child{
+                        margin-bottom: 70px;
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        .footer-table{
+            flex-direction: column;
+            margin-top: -30px;
+            .footer-left{
+                width: 100%;
+                ul{
+                    li{
+                        i{
+                            font-size: 1.3rem;
+                            margin-right: -10px;
+                        }
+                    }
+                }
+            }
+            .footer-center{
+                margin-top: 30px;
+                h3{
+                    &.text{
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+        }
+    }
+  }
+

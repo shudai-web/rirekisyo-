@@ -1,0 +1,58 @@
+@media (max-width: 780px) {
+  .selected{
+    display: none;
+  }
+  .visual-content{
+    display: none;
+  }
+  .vis-ttl h1{
+    text-align: center;
+    margin-top: 350px;
+    color: white;
+  }
+  .account-media input,select,button{
+    width: 100%;
+    border-radius: 5px;
+    padding: 3px;
+    margin-bottom: 10px;
+  }
+  .image1{
+    margin-top: 50px;
+  }
+  .list{
+    margin-top: 50px;
+  }
+  .image3{
+    margin-top: 50px;
+  }
+  .card{
+    margin-bottom: 50px;
+  }
+  .footer-flex{
+    flex-direction: column;
+  }
+  .footer-right{
+    margin-top: 50px;
+    padding-bottom: 20px;
+  }
+  section{
+    border-bottom: 1px solid grey;
+    padding-bottom: 20px;
+  }
+  .info-box{
+    border: none;
+  }
+  .box1{
+    margin-bottom: 50px;
+    margin-top: 150px;
+  }
+}
+
+@media (min-width: 780px) {
+  .vis-ttl h1{
+    display: none;
+  }
+  .account-media{
+    display: none;
+  }
+}

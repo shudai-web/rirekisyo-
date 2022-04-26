@@ -1,0 +1,265 @@
+*{
+  font-family: sans-serif;
+}
+
+header{
+  width: 100%;
+  padding: 0 20px;
+  background-color: white;
+  position: fixed;
+  z-index: 1;
+}
+
+li{
+  list-style: none;
+  margin: 0;
+}
+
+ul{
+  padding: 0;
+  margin: 0;
+}
+
+@mixin colora($color){
+  color: $color;
+}
+
+header ul li{
+  display: inline-block;
+  font-weight: bold;
+  vertical-align: middle;
+  margin-right: 20px;
+}
+
+header ul li a{
+  color: rgb(233, 74, 74);
+}
+
+header ul li a:hover{
+  color: red;
+  text-decoration: none;
+}
+
+.header-flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 78px;
+}
+
+.header-right button{
+  background-color: rgb(233, 74, 74);
+}
+
+.header-right button:hover{
+  background-color: red;
+}
+
+.jumbotron{
+  height: 550px;
+  width: 100%;
+  background-image: url("image/9d08d356-59b9-4ac4-9f41-5b9c13c2b211.jpg");
+  background-size: cover;
+}
+
+.visual-content{
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 100px;
+}
+
+.visual-content p{
+  margin: 0;
+}
+
+.visual-content input,select,button{
+  width: 100%;
+  border-radius: 5px;
+  padding: 3px;
+  margin-bottom: 10px;
+}
+
+.visual-content button{
+  background-color: rgb(233, 74, 74);
+}
+
+.visual-content button:hover{
+  background-color: red;
+}
+
+.account-box1 h3{
+    font-size: 25px;
+    font-weight: bold;
+    margin-top:50px;
+    margin-bottom: 25px;
+}
+
+.account-box1 p{
+  line-height: 30px;
+}
+
+.btn{
+  background-color: rgb(233, 74, 74);
+}
+
+.btn:hover{
+  background-color: red;
+}
+
+.ttlline{
+  border: 1px solid black;
+  padding: 1px;
+  height: 1px;
+  width: 50px;
+  border-radius: 3px;
+  margin: 100px auto 10px auto;
+}
+
+.ttl{
+  margin-bottom: 50px;
+}
+
+.ttl h1{
+  text-align: center;
+  font-weight: bold;
+  font-size: 50px;
+}
+
+.fa-check-circle{
+  font-size: 50px;
+}
+
+.ttl-box h4{
+  font-weight: bold;
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+.ttl-box a{
+  color: grey;
+}
+
+.fa-quote-left{
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: yellow;
+}
+
+.image1-p{
+  font-size: 30px;
+}
+
+.image1-row{
+  margin-top: 150px;
+}
+
+.image1-p2{
+  color: silver;
+}
+
+.image1-left a{
+  border: 2px solid black;
+  padding: 10px;
+  display: block;
+  margin-top: 10px;
+  width: 170px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: black;
+}
+
+.list-left p{
+  font-size: 17px;
+  line-height: 30px;
+}
+
+.list-left a{
+  color: grey;
+}
+
+.list li{
+  padding-bottom: 20px;
+}
+
+.image2{
+  margin-top: 100px;
+}
+
+.image3-right{
+  margin-top: 100px;
+}
+
+.btn-color{
+  color: grey;
+}
+
+.que li{
+  padding: 25px 0;
+  border-bottom: 1px solid grey;
+}
+
+.que a{
+  color: grey;
+}
+
+.card-body h6,a{
+  color: grey;
+}
+
+.card-row{
+  margin-top: 100px;
+}
+
+.card-body a:hover{
+  color: grey;
+  text-decoration: none;
+}
+
+.sub{
+  background-image: url("image/download.webp");
+  margin-top: 100px;
+}
+
+.under-ttl h1{
+  font-weight: bold;
+}
+
+.under-ttl button{
+  width:120px;
+}
+
+.under-ttl{
+  margin-top: 150px;
+}
+
+.info-ttl{
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.info-box{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid grey;
+}
+
+.info-box :hover{
+  color: grey;
+}
+
+.footer-flex{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.footer-left ul li{
+  color: grey;
+}
+
+.footer-right ul li{
+  display: inline-block;
+  margin-right: 10px;
+  color: grey;
+}

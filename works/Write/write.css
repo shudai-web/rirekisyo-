@@ -1,0 +1,711 @@
+@charset "UTF-8";
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  /* プロジェクトによって変動 */
+  color: #000;
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'YuGothic', '游ゴシック', 'メイリオ', Meiryo, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+  width: 100%;
+  font-variant-numeric: tabular-nums;
+  /* safari hover対策 */
+  -webkit-font-smoothing: antialiased;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+img {
+  vertical-align: bottom;
+  line-height: 1.0;
+}
+
+button {
+  line-height: 1.0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+/*ここから自分*/
+.body {
+  font-size: 15px;
+  font-family: Georgia, '游明朝', YuMincho, 'Hiragino Mincho ProN', Meiryo, serif;
+  line-height: 1.8;
+}
+
+h1, h2, h3, h4, h5, h6, .site-title {
+  font-family: Georgia, '游明朝', YuMincho, 'Hiragino Mincho ProN', Meiryo, serif;
+}
+
+.container {
+  max-width: 1000px;
+  width: 100%;
+  padding-left: 75px;
+  padding-right: 75px;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*ヘッダー*/
+header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 70px;
+}
+
+header .container .header-right {
+  margin-top: 30px;
+}
+
+header .container .header-right ul {
+  display: inline-block;
+}
+
+header .container .header-right li {
+  display: inline-block;
+  margin-right: 30px;
+  padding: 20px 0;
+  position: relative;
+}
+
+header .container .header-right li a:hover {
+  color: #47a047;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+header .container .header-right li ul {
+  position: absolute;
+  top: 50px;
+  left: -0.5px;
+  height: 0;
+  visibility: hidden;
+}
+
+header .container .header-right li ul li {
+  width: 200px;
+  display: block;
+  border: solid 1px #f0f0f0;
+  -webkit-box-shadow: 0.5px 0.5px #f0f0f0;
+          box-shadow: 0.5px 0.5px #f0f0f0;
+  padding: 10px 20px;
+  display: block;
+  background-color: white;
+}
+
+header .container .header-right li:hover ul li {
+  visibility: visible;
+}
+
+header .container .header-right li .nav {
+  margin-left: 13px;
+}
+
+header .container .header-right .serch-box {
+  display: inline-block;
+  padding-left: 5px;
+}
+
+header .container .header-right .serch-box .serch {
+  cursor: pointer;
+}
+
+header .container .header-right .serch-box #input {
+  height: 40px;
+  border: none;
+  outline: none;
+  width: 0;
+  cursor: text;
+}
+
+#nav-container {
+  display: none;
+}
+
+.toggle-icon {
+  display: block;
+  width: 100%;
+  -webkit-transition: margin 300ms;
+  transition: margin 300ms;
+  cursor: pointer;
+}
+
+#nav-container {
+  margin-top: 3%;
+  z-index: 101;
+}
+
+.toggle-icon .bar {
+  display: block;
+  width: 1.4em;
+  height: 0.14em;
+  margin: 0.5em;
+  background-color: black;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition-duration: 300ms;
+  transition-duration: 300ms;
+}
+
+.toggle-icon .bar:nth-of-type(2) {
+  -webkit-transition: opacity 300ms;
+  transition: opacity 300ms;
+}
+
+/*pushed*/
+.pushed .toggle-icon {
+  margin-right: -0.7em;
+}
+
+.pushed .bar:nth-of-type(2) {
+  opacity: 0;
+}
+
+.pushed .bar:nth-of-type(1) {
+  -webkit-transform: rotate(42deg) translateY(0.87em);
+  transform: rotate(42deg) translateY(0.87em);
+}
+
+.pushed .bar:nth-of-type(3) {
+  -webkit-transform: rotate(-42deg) translateY(-0.87em);
+  transform: rotate(-42deg) translateY(-0.87em);
+}
+
+.nav-modal-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+  background-color: #fff;
+  opacity: 0.9;
+  display: none;
+}
+
+.nav-modal-wrapper .modal {
+  opacity: 1;
+  text-align: center;
+  margin-top: 20%;
+}
+
+.nav-modal-wrapper .modal .modal-list {
+  margin-top: 3%;
+}
+
+.nav-modal-wrapper .modal .modal-list li {
+  font-size: 1.4rem;
+  margin-top: 3.8%;
+}
+
+.nav-modal-wrapper .modal .modal-list li a:hover {
+  color: #47a047;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+.nav-modal-wrapper .modal .modal-list li ul li {
+  font-size: 1.2rem;
+}
+
+/*見出し*/
+.top-wrapper {
+  margin-top: 90px;
+}
+
+.top-wrapper .visual {
+  text-align: center;
+}
+
+.top-wrapper .visual img {
+  width: 100%;
+}
+
+.top-wrapper .main-text {
+  margin-top: 100px;
+}
+
+.top-wrapper .main-text h2 {
+  font-size: 27px;
+  line-height: 1.8;
+  color: #777;
+}
+
+/*ブログ*/
+.blog-content {
+  margin-top: 130px;
+}
+
+.blog-content .blog-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 90px;
+}
+
+.blog-content .blog-item h4 {
+  color: #777;
+}
+
+.blog-content .blog-item h4 a:hover {
+  color: #666;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+.blog-content .blog-item .ttl {
+  width: 70%;
+}
+
+.blog-content .blog-item .ttl h3 {
+  font-size: 1.5rem;
+  color: inherit;
+}
+
+.blog-content .blog-item .ttl h3 a:hover {
+  color: #47a047;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+.blog-content .blog-item .ttl p {
+  width: 100%;
+  margin-top: 35px;
+  color: #777;
+}
+
+.page-btn {
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 105px;
+}
+
+.page-btn .number {
+  border: solid 1px #ddd;
+  display: inline-block;
+  padding: 12px 20px;
+  margin-right: 12px;
+  cursor: pointer;
+}
+
+.page-btn .number a {
+  color: #777;
+}
+
+.page-btn .number a:hover {
+  color: black;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+.page-btn .number a .fas {
+  font-size: 12px;
+}
+
+.page-btn .number a .fas.right {
+  margin-left: 10px;
+}
+
+.page-btn .number a .fas.left {
+  margin-right: 10px;
+}
+
+.account {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 auto;
+  height: 400px;
+  display: table;
+  padding-top: 77px;
+  padding-bottom: 125px;
+  border-top: solid 0.1px #ddd;
+  border-bottom: solid 0.1px #ddd;
+}
+
+.account .account-content {
+  display: table-cell;
+  width: 32.36%;
+  padding-right: 75px;
+}
+
+.account .account-content .account-prof {
+  display: inline-block;
+}
+
+.account .account-content .account-prof img {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+}
+
+.account .account-content .account-ttl {
+  display: inline-block;
+  margin-left: 20px;
+  vertical-align: top;
+  margin-top: 20px;
+}
+
+.account .account-content .account-ttl h4 {
+  font-size: 20px;
+}
+
+.account .account-content .account-ttl li {
+  display: inline-block;
+  margin-right: 20px;
+  color: #777;
+  font-size: 20px;
+}
+
+.account .account-content .account-ttl li:hover {
+  color: #666;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+.account .account-content p {
+  color: #777;
+  margin-top: 25px;
+}
+
+.account .account-right {
+  display: table-cell;
+  width: 67.64%;
+  text-align: left;
+  vertical-align: top;
+}
+
+.account .account-right .account-box {
+  display: table;
+  width: 100%;
+}
+
+.account .account-right .account-box .account-item {
+  display: table-cell;
+  padding-right: 21px;
+  padding-left: 19px;
+  width: 33.3%;
+}
+
+.account .account-right .account-box .account-item .account-top h4 {
+  margin-bottom: 25px;
+}
+
+.account .account-right .account-box .account-item .account-top p, .account .account-right .account-box .account-item .account-top .list-item {
+  color: #777;
+}
+
+.account .account-right .account-box .account-item .account-top a {
+  border-bottom: solid 1px #ddd;
+  color: #777;
+  display: inline-block;
+  margin-bottom: 14px;
+}
+
+.account .account-right .account-box .account-item .account-top a:hover {
+  color: #47a047;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+.account .account-right .account-box .account-item .account-top h5 {
+  color: #999;
+  margin-bottom: 25px;
+}
+
+.account .account-right .account-box .account-item .account-top .list-item {
+  margin-bottom: 14px;
+}
+
+.account .account-right .account-box .account-item .serch-box2 {
+  width: 100%;
+  outline: none;
+  margin-top: 95px;
+  padding: 10px 13px;
+  font-size: 16px;
+  border: 1px solid #e6e6e6;
+}
+
+.account .account-right .account-box .account-item:first-child {
+  padding-left: 0;
+}
+
+.account .account-right .account-box .account-item:last-child {
+  padding-right: 0;
+}
+
+footer {
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 80px;
+}
+
+footer .container .footer-table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 65px;
+}
+
+footer .container .footer-table .footer-left ul li {
+  display: inline-block;
+  margin-right: 25px;
+  font-size: 25px;
+  color: #999;
+}
+
+footer .container .footer-table .footer-left ul li:hover {
+  color: #666;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+footer .container .footer-table .footer-left ul li:last-child {
+  margin-right: 180px;
+}
+
+footer .container .footer-table .footer-center h3 {
+  color: #ddd;
+  font-size: 0.9rem;
+}
+
+footer .container .footer-table .footer-center h3 a {
+  color: #666;
+}
+
+footer .container .footer-table .footer-center h3 a:hover {
+  color: black;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+/*ここからメディアクエリ*/
+@media (max-width: 780px) {
+  body .container {
+    padding: 0 15px;
+  }
+  .header-right {
+    display: none;
+  }
+  #nav-container {
+    display: block;
+  }
+  .container {
+    max-width: 680px;
+    padding: 0;
+  }
+  .top-wrapper .main-text h2 {
+    font-size: 1.38rem;
+  }
+  .blog-content .blog-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 60px;
+  }
+  .blog-content .blog-item h4 {
+    font-size: 0.85rem;
+    font-weight: lighter;
+  }
+  .blog-content .blog-item .ttl {
+    width: 100%;
+  }
+  .blog-content .blog-item .ttl h3 {
+    font-size: 1.3rem;
+    padding-top: 10px;
+  }
+  .blog-content .blog-item .ttl p {
+    width: 100%;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    line-height: 28px;
+  }
+  .page-btn .container .page-content {
+    width: 35%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .page-btn .container .page-content .number {
+    display: none;
+    padding: 5px 15px;
+  }
+  .page-btn .container .page-content .number:last-child {
+    display: block;
+  }
+  .page-btn .container .page-content .number a {
+    font-size: 0.7rem;
+  }
+  .account .account-content {
+    display: block;
+    padding: 0;
+    width: 100%;
+  }
+  .account .account-content .account-ttl h4, .account .account-content .account-ttl a {
+    font-size: 1.1rem;
+  }
+  .account .account-content .account-ttl h4 i, .account .account-content .account-ttl a i {
+    font-size: 1.2rem;
+    margin-right: -10px;
+  }
+  .account .account-content p {
+    font-size: 0.8rem;
+  }
+  .account .account-right {
+    display: block;
+    width: 100%;
+  }
+  .account .account-right .account-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .account .account-right .account-box .account-item {
+    width: 100%;
+    margin-top: 70px;
+    padding: 0;
+  }
+  .account .account-right .account-box .account-item .account-top h4, .account .account-right .account-box .account-item .account-top p, .account .account-right .account-box .account-item .account-top ul {
+    font-size: 0.8rem;
+  }
+  .account .account-right .account-box .account-item .account-top form input {
+    width: 40%;
+    padding: 5px 13px;
+  }
+  .account .account-right .account-box .account-item:first-child {
+    margin-bottom: 70px;
+  }
+  footer .footer-table {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: -30px;
+  }
+  footer .footer-table .footer-left {
+    width: 100%;
+  }
+  footer .footer-table .footer-left ul li i {
+    font-size: 1.3rem;
+    margin-right: -10px;
+  }
+  footer .footer-table .footer-center {
+    margin-top: 30px;
+  }
+  footer .footer-table .footer-center h3.text {
+    font-size: 0.8rem;
+  }
+}
+/*# sourceMappingURL=write.css.map */
